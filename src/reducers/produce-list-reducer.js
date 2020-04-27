@@ -1,10 +1,7 @@
 export default (state = {}, action) => {
+  const { id, month, selection } = action;
   switch (action.type) {
     case "ADD_PRODUCELISTITEM":
-      const { id, month, selection } = action;
-      console.log(id);
-      console.log(month);
-      console.log(selection);
       return Object.assign({}, state, {
         [id]: {
           id: id,
@@ -12,6 +9,10 @@ export default (state = {}, action) => {
           selection: selection,
         },
       });
+    case "DELETE_PRODUCELISTITEM":
+      const newState = { ...state };
+      delete newState[id];
+      return newState;
     default:
       return state;
   }
