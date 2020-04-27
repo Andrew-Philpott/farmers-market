@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Paper, makeStyles } from "@material-ui/core";
-import ProduceButton from "./ProduceButton";
 import ProduceHeader from "./ProduceHeader";
 import ProduceList from "./ProduceList";
 import ProduceListButton from "./ProduceListButton";
