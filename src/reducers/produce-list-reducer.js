@@ -1,4 +1,4 @@
-export default (state = {}, action) => {
+export const ProduceListReducer = (state = {}, action) => {
   const { id, month, selection } = action;
   switch (action.type) {
     case "ADD_PRODUCELISTITEM":
